@@ -10,13 +10,15 @@ import { CreateBug } from './pages/CreateBug';
 import { BugDetail } from './pages/BugDetail';
 import { Profile } from './pages/Profile';
 import { Navbar } from './components/Navbar';
+import ErrorBoundary from './components/ErrorBoundary';
 import './App.css';
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
+    <ErrorBoundary>
+      <AuthProvider>
+        <Router>
+          <div className="min-h-screen bg-gray-50">
           <Routes>
             {/* Guest Routes */}
             <Route
@@ -99,9 +101,10 @@ function App() {
               element={<Navigate to="/dashboard" replace />}
             />
           </Routes>
-        </div>
-      </Router>
-    </AuthProvider>
+          </div>
+        </Router>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 

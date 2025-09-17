@@ -2,7 +2,7 @@
   "name": "bug-tracker",
   "version": "1.0.0",
   "description": "Bug tracking application",
-  "homepage": "https://yourusername.github.io/bug-tracker",
+  "homepage": "/",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
